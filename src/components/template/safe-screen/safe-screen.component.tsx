@@ -1,11 +1,10 @@
-import { StatusBar, View } from 'react-native';
+import { useTheme } from '@/theme';
 import type { PropsWithChildren } from 'react';
+import { StatusBar, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { useTheme } from '@/theme';
-
 function SafeScreen({ children }: PropsWithChildren) {
-	const { layout, variant, navigationTheme } = useTheme();
+	const { layout, variant, navigationTheme, backgrounds } = useTheme();
 	const insets = useSafeAreaInsets();
 
 	return (
@@ -15,7 +14,6 @@ function SafeScreen({ children }: PropsWithChildren) {
 				{
 					backgroundColor: navigationTheme.colors.background,
 					// Paddings to handle safe area
-					paddingTop: insets.top,
 					paddingBottom: insets.bottom,
 					paddingLeft: insets.left,
 					paddingRight: insets.right,

@@ -12,6 +12,7 @@ const colorsLight = {
 	purple500: '#44427D',
 	purple100: '#E1E1EF',
 	purple50: '#1B1A23',
+	green100: '#4caf50'
 } as const;
 
 const colorsDark = {

@@ -2,12 +2,12 @@ import { render, screen } from '@testing-library/react-native';
 import { MMKV } from 'react-native-mmkv';
 
 import { ThemeProvider } from '@/theme';
-import sourceLight from '@/theme/assets/images/tom_light.png';
 import sourceDark from '@/theme/assets/images/tom_dark.png';
+import sourceLight from '@/theme/assets/images/tom_light.png';
 
 import { isImageSourcePropType } from '@/types/guards/image';
 
-import ImageVariant from './ImageVariant';
+import ImageVariant from './image-variant.component';
 
 describe('ImageVariant component should render correctly', () => {
 	let storage: MMKV;

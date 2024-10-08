@@ -11,7 +11,7 @@ type Props = ImageProps & {
 	[variant in VariantSource]?: ImageSourcePropType;
 };
 
-function ImageVariant({ source: defaultSource, ...props }: Props) {
+const ImageVariant = ({ source: defaultSource, ...props }: Props) => {
 	const { variant } = useTheme();
 
 	const source = useMemo(() => {
